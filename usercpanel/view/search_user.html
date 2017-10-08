@@ -1,0 +1,55 @@
+<div class="content">
+     <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Search User</h4>
+                            </div>
+
+
+
+                            <div class="content">
+                                <?php
+                                if(array_key_exists("status_detail",$data)){
+                                if(!is_null($data['status_detail']['title'])){?>
+                                <div class="alert alert-info">
+                                    <span><?= $data['status_detail']['title']?></span>
+                               <!--  <br>  <span><?= $data['status_detail']['description']?></span> -->
+                                </div>
+                               <?php }}
+                                 ?>
+                                
+                                
+                                
+                                <form action="assign_key" method="get">
+                                <input type="hidden" name="action" value="search">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>User Code</label>
+                                                <input type="text" class="form-control"  value="" name="code">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>    
+
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Search</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <?php
+            if($data['search']){
+            include 'assign_key.php';
+            }
+            ?>
+
+           
+        </div>
