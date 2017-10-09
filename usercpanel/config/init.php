@@ -2,10 +2,7 @@
 class DbInit{
 
 
-	public $db_name = "development";
-	public $db_user = "coder_data";
-	public $db_pass = "coder@123";
-	public $server = "obleamlabs.com";
+	
 
 	public $con;
 
